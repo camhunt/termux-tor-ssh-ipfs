@@ -4,6 +4,8 @@
 GITHUB_USERS=${GITHUB_USERS:-$@}
 
 # Install dependencies
+pkg update
+pkg -y upgrade
 which bash > /dev/null 2>&1 || yes | pkg install -y bash
 which curl > /dev/null 2>&1 || yes | pkg install -y curl
 which git > /dev/null 2>&1 || yes | pkg install -y git
