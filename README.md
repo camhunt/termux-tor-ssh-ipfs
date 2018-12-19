@@ -1,4 +1,4 @@
-# termux-tor-ssh-ipfs
+# termux-tor-ssh
 
 This is an attempt at making something to easily purpose an android phone to be ssh reachable over a tor v3 hidden service, with a minimum of setup preparation.
 
@@ -6,9 +6,9 @@ As a work-in-progress, this will change for a bit until I get it working the way
 
 ## Usage:
 
-    pkg install curl && curl -sL https://raw.githubusercontent.com/ianblenke/termux-tor-ssh/master/run.sh | GITHUB_USERS=ianblenke sh -x
+    pkg install curl && curl -sL https://raw.githubusercontent.com/camhunt/termux-tor-ssh/master/run.sh | GITHUB_USERS=ianblenke sh -x
 
-After a `exit` and a restart of TermUX, it should show you your hidden service onion address, which should look something like this:
+After a `exit` and a restart of TermUX, it should show you your hidden service onion address and the Termux username, which should look something like this:
 
     bhffkxuwbzw3b46l2dqm2dykagiktjdi274twmhnblx4rxdsjxqxzsad.onion
 
