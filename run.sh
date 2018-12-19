@@ -31,7 +31,7 @@ if [ -n "$GITHUB_USERS" ]; then
 fi
 
 if [ ! -d $HOME/termux-tor-ssh ]; then
-  git clone https://github.com/ianblenke/termux-tor-ssh $HOME/termux-tor-ssh
+  git clone https://github.com/camhunt/termux-tor-ssh-ipfs $HOME/termux-tor-ssh
 fi
 
 cd $HOME/termux-tor-ssh
