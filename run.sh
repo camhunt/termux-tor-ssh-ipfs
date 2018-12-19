@@ -10,7 +10,6 @@ which git > /dev/null 2>&1 || yes | pkg install -y git
 which rsync > /dev/null 2>&1 || yes | pkg install -y rsync
 which sshd > /dev/null 2>&1 || yes | pkg install -y openssh
 which tor > /dev/null 2>&1 || yes | pkg install -y tor
-which ipfs > /dev/null 2>&1 || yes | pkg install -y ipfs
 
 if [ -n "$GITHUB_USERS" ]; then
 
@@ -30,7 +29,7 @@ if [ -n "$GITHUB_USERS" ]; then
 fi
 
 if [ ! -d $HOME/termux-tor-ssh ]; then
-  git clone https://github.com/ianblenke/termux-tor-ssh $HOME/termux-tor-ssh
+  git clone https://github.com/camhunt/termux-tor-ssh $HOME/termux-tor-ssh
 fi
 
 cd $HOME/termux-tor-ssh
@@ -42,9 +41,6 @@ rsync -SHPaxq bin/ $HOME/bin/
 
 export SVDIR=$HOME/.sv
 
-if [ ! -d $HOME/.ipfs ]; then
-  ipfs init
-fi
 
 mkdir -p $HOME/../usr/var/lib/tor/ssh
 
